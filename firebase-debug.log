@@ -69,3 +69,36 @@ You're about to initialize a Firebase project in this directory:
 [info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
 [info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
 [info] 
+[debug] [2023-06-04T10:27:04.794Z] >>> [apiv2][query] GET https://api.github.com/repos/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:27:05.012Z] <<< [apiv2][status] GET https://api.github.com/repos/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:27:05.012Z] <<< [apiv2][body] GET https://api.github.com/repos/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-06-04T10:27:07.500Z] >>> [apiv2][query] GET https://api.github.com/repos/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:27:07.715Z] <<< [apiv2][status] GET https://api.github.com/repos/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:27:07.715Z] <<< [apiv2][body] GET https://api.github.com/repos/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-06-04T10:27:22.841Z] >>> [apiv2][query] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:27:23.045Z] <<< [apiv2][status] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:27:23.046Z] <<< [apiv2][body] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-06-04T10:27:31.320Z] >>> [apiv2][query] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:27:31.525Z] <<< [apiv2][status] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:27:31.525Z] <<< [apiv2][body] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-06-04T10:27:31.733Z] >>> [apiv2][query] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:27:31.953Z] <<< [apiv2][status] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:27:31.953Z] <<< [apiv2][body] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-06-04T10:27:32.229Z] >>> [apiv2][query] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:27:32.432Z] <<< [apiv2][status] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:27:32.433Z] <<< [apiv2][body] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-06-04T10:27:32.644Z] >>> [apiv2][query] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:27:32.841Z] <<< [apiv2][status] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:27:32.842Z] <<< [apiv2][body] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-06-04T10:28:41.127Z] >>> [apiv2][query] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:28:41.364Z] <<< [apiv2][status] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:28:41.365Z] <<< [apiv2][body] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-06-04T10:29:43.656Z] >>> [apiv2][query] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:29:43.888Z] <<< [apiv2][status] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:29:43.889Z] <<< [apiv2][body] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-06-04T10:29:45.045Z] >>> [apiv2][query] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:29:45.246Z] <<< [apiv2][status] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:29:45.246Z] <<< [apiv2][body] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2023-06-04T10:29:45.658Z] >>> [apiv2][query] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key type=owner
+[debug] [2023-06-04T10:29:45.853Z] <<< [apiv2][status] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key 401
+[debug] [2023-06-04T10:29:45.853Z] <<< [apiv2][body] GET https://api.github.com/repos/RamProg/ramiro-uk/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
