@@ -2,9 +2,10 @@ const Nav = () => {
   return (
     <nav>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        {/* <li>Download my CV</li>
+        <li>Book a Meeting</li>
+        <li>Drop me a message</li>
+        <li>Check my Projects</li> */}
       </ul>
     </nav>
   );

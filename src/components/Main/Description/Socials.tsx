@@ -10,9 +10,11 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 
+type IconText = 'linkedin' | 'github' | 'stackoverflow' | 'medium';
+
 type IconsType = {
   fontAwesomeIcon: IconDefinition;
-  text: 'linkedin' | 'github' | 'stackoverflow' | 'medium';
+  text: IconText;
   url: string;
 };
 
@@ -22,13 +24,21 @@ const icons: IconsType[] = [
     text: 'linkedin',
     url: 'https://www.linkedin.com/in/ramirodlp/',
   },
-  { fontAwesomeIcon: faGithub, text: 'github', url: 'https://github.com/RamProg' },
+  {
+    fontAwesomeIcon: faGithub,
+    text: 'github',
+    url: 'https://github.com/RamProg',
+  },
   {
     fontAwesomeIcon: faStackOverflow,
     text: 'stackoverflow',
     url: 'https://stackoverflow.com/users/13844309/ramaprog',
   },
-  { fontAwesomeIcon: faMedium, text: 'medium', url: 'https://medium.com/@ramirodlp' },
+  {
+    fontAwesomeIcon: faMedium,
+    text: 'medium',
+    url: 'https://medium.com/@ramirodlp',
+  },
 ];
 
 const allOff = {
@@ -50,8 +60,10 @@ const Socials = () => {
 
   const handleMouseLeave = () => setHoverIcons(allOff);
 
+  const isHovered = (text: IconText) => hoverIcons[text];
+
   return (
-    <div className="flex flex-row justify-evenly mt-10">
+    <div className="flex flex-row justify-start mt-10">
       {icons.map(icon => (
         <div
           key={icon.text}
@@ -62,22 +74,11 @@ const Socials = () => {
           <FontAwesomeIcon
             icon={icon.fontAwesomeIcon}
             size="2x"
-            color={hoverIcons[icon.text] ? 'grey' : 'white'}
+            color={isHovered(icon.text) ? 'grey' : 'white'}
+            className="w-6 mr-4"
           />
         </div>
       ))}
-      {/* <div
-        onClick={handleIconClick}
-        onMouseEnter={() => handleMouseEnter('linkedin')}
-        onMouseLeave={handleMouseLeave}>
-        <FontAwesomeIcon
-          icon={faLinkedin}
-          size="2x"
-          color={hoverIcons.linkedin ? 'grey' : 'white'}
-        />
-      </div>
-      <FontAwesomeIcon icon={faGithub} size="2x" />
-      <FontAwesomeIcon icon={faStackOverflow} size="2x" /> */}
     </div>
   );
 };

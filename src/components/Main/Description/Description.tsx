@@ -1,22 +1,49 @@
-import Socials from "./Socials";
+import Socials from './Socials';
+import { faCode, faEarthEurope, IconDefinition, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+type LinesType = {
+  fontAwesomeIcon: IconDefinition;
+  text: string;
+};
+
+const lines: LinesType[] = [
+  {
+    fontAwesomeIcon: faCode,
+    text: 'Software Engineer',
+  },
+  {
+    fontAwesomeIcon: faEarthEurope,
+    text: 'UK Based',
+  },
+  {
+    fontAwesomeIcon: faMobileScreenButton,
+    text: 'Mobile First',
+  },
+];
 
 const Description = () => {
   return (
-    <div className="ml-5">
+    <div className="flex flex-col w-1/">
       <p className="text-3xl mt-5 font-serif text-slate-200">
-        Hey! I&apos;m Ramiro
+        Hi! I&apos;m Ramiro
       </p>
-      <p className="text-lg font-serif text-slate-200">
-        I&apos;m a Software Engineer
+      <p className="flex text-lg font-serif text-slate-200">
+        I lead Engineering Teams to success
       </p>
-      <ul className="mt-10">
-        <li className="ml-2 text-sm font-serif text-slate-200">- UK Based</li>
-        <li className="mt-5 ml-2 text-sm font-serif text-slate-200">
-          - Mobile Development
-        </li>
-        <li className="mt-5 ml-2 text-sm font-serif text-slate-200">
-          - ramiro@ramiro.uk
-        </li>
+      <ul className="flex flex-col flex-grow justify-between mt-10">
+        {lines.map(line => (
+          <li
+            key={line.text}
+            className="ml-2 text-sm font-serif text-slate-200">
+            <FontAwesomeIcon
+              icon={line.fontAwesomeIcon}
+              className="w-4 mr-2"
+            />
+            {line.text}
+          </li>
+        ))}
       </ul>
       <Socials />
     </div>
