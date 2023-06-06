@@ -25,7 +25,7 @@ const lines: LinesType[] = [
 
 const Description = () => {
   return (
-    <div className="flex flex-col w-1/">
+    <div className="flex flex-col sm:w-1/2 items-center sm:items-start">
       <p className="text-3xl mt-5 font-serif text-slate-200">
         Hi! I&apos;m Ramiro
       </p>
