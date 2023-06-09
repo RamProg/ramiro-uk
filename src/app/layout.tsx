@@ -1,13 +1,14 @@
 import '@/app/globals.css';
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { roboto } from '@/assets/fonts';
 
-config.autoAddCss = false
+config.autoAddCss = false;
 
 export const metadata = {
   title: 'Ramiro',
   description: 'Software Engineer',
+  themeColor: '#ff5733',
 };
 
 export default function RootLayout({
@@ -15,9 +16,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
-    <html lang="en" >
+    <html lang="en">
       <body className={`${roboto.variable} font-sans`}>{children}</body>
     </html>
   );
