@@ -1,6 +1,5 @@
 import Socials from './Socials';
 import { faCode, faEarthEurope, IconDefinition, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type LinesType = {
