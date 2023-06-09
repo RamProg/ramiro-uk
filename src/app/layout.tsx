@@ -1,4 +1,4 @@
-import './globals.css';
+import '@/app/globals.css';
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { roboto } from '@/assets/fonts';

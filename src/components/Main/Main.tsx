@@ -3,12 +3,18 @@
 import Image from 'next/image';
 import Description from './Description/Description';
 import { isMobile } from 'react-device-detect';
+import { useEffect, useState } from 'react';
+
+const env = process.env.NODE_ENV;
+const __DEV__ = env === 'development';
 
 const Main = () => {
-  const env = process.env.NODE_ENV;
-  const __DEV__ = env === 'development';
-  const IS_DEV_ON_PHONE = __DEV__ && window.innerWidth < 768;
-  const imageSize = isMobile || IS_DEV_ON_PHONE ? 256 : 320;
+  const [imageSize, setImageSize] = useState<256 | 320>(256);
+
+  useEffect(() => {
+    const IS_DEV_ON_PHONE = __DEV__ && window.innerWidth < 768;
+    setImageSize(isMobile || IS_DEV_ON_PHONE ? 256 : 320);
+  }, []);
 
   return (
     <main
