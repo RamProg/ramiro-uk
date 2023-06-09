@@ -1,10 +1,9 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
+import { roboto } from '@/assets/fonts';
 
-const inter = Inter({ subsets: ['latin'] });
+config.autoAddCss = false
 
 export const metadata = {
   title: 'Ramiro',
@@ -16,9 +15,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" >
+      <body className={`${roboto.variable} font-sans`}>{children}</body>
     </html>
   );
 }
