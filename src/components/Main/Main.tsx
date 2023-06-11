@@ -17,17 +17,20 @@ export default function Main() {
       if (!event || isMoving) {
         return;
       }
-
       setIsMoving(true);
+      setTimeout(() => {
+        setIsMoving(false);
+      }, 1000);
+      console.log('movimiento siendo procesado');
+      
       event.stopPropagation();
-      event.preventDefault();      
+      event.preventDefault();
       window.scroll({
         top: window.scrollY > 10 ? 0 : window.innerHeight,
         behavior: 'smooth',
       });
       setHasReachedSecondScreen(prev => !prev);
       setFloatDown(prev => !prev);
-      setIsMoving(false);
     };
 
     window.addEventListener('touchmove', handleTouchMove, { passive: false });
@@ -41,7 +44,10 @@ export default function Main() {
     <div>
       <Landing />
       <Nav />
-      <FloatingScroll direction={floatDown ? 'down' : 'up'} handleFloatPress={setFloatDown}/>
+      <FloatingScroll
+        direction={floatDown ? 'down' : 'up'}
+        handleFloatPress={setFloatDown}
+      />
     </div>
   );
 }
