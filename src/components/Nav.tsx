@@ -1,15 +1,52 @@
-import Link from "next/link";
+import Link from 'next/link';
+import FloatingScroll from './FloatingScroll';
+
+type LinkType = {
+  url: string;
+  text: string;
+};
+
+type LinksType = LinkType[];
 
 const Nav = () => {
+  const links: LinksType = [
+    {
+      url: 'https://drive.google.com/file/d/1huO-gbsx88v5zIhoA1DmPvQ5OOiAPTUl/view?usp=sharing',
+      text: 'Download my CV',
+    },
+    {
+      url: 'https://calendly.com/ramirodlp/15min',
+      text: 'Book a Meeting',
+    },
+    {
+      url: 'https://forms.gle/MwpUZgpCzjuMxAGo6',
+      text: 'Drop me a Message',
+    },
+    {
+      url: 'https://www.linkedin.com/in/ramirodlp/details/projects/',
+      text: 'Check my Projects',
+    },
+  ];
+
   return (
-    <nav id="nav" className="h-screen bg-orange-900">
-      <ul>
-        <li><Link target="_blank" href="https://drive.google.com/file/d/1huO-gbsx88v5zIhoA1DmPvQ5OOiAPTUl/view?usp=sharing">Download my CV</Link></li>
-        <li><Link target="_blank" href="https://calendly.com/ramirodlp/15min">Book a Meeting</Link></li>
-        <li><Link target="_blank" href="https://forms.gle/MwpUZgpCzjuMxAGo6">Drop me a Message</Link></li>
-        <li><Link target="_blank" href="https://www.linkedin.com/in/ramirodlp/details/projects/">Check my Projects</Link></li>
-      </ul>
-    </nav>
+    <>
+      <nav id='nav' className='flex h-screen justify-center p-10 bg-orange-700'>
+        <ul className='flex flex-col items-center justify-evenly'>
+          {links.map(link => {
+            return (
+              <li
+                className='flex justify-center items-center border-2 p-2 rounded-md w-48 h-14'
+                key={link.text}>
+                <Link target='_blank' href={link.url}>
+                  {link.text.toUpperCase()}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <FloatingScroll direction='up' />
+      </nav>
+    </>
   );
 };
 

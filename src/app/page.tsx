@@ -3,12 +3,11 @@ import Main from '@/components/Main/Main';
 import Nav from '@/components/Nav';
 
 export default function Home() {
-
   return (
     <div>
       <Main />
       <Nav />
-      <FloatingScroll />
+      <FloatingScroll direction='down' />
     </div>
   );
 }
