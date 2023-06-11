@@ -1,13 +1,7 @@
-import FloatingScroll from '@/components/FloatingScroll';
+'use client';
+
 import Main from '@/components/Main/Main';
-import Nav from '@/components/Nav';
 
 export default function Home() {
-  return (
-    <div>
-      <Main />
-      <Nav />
-      <FloatingScroll direction='down' />
-    </div>
-  );
+  return <Main />;
 }

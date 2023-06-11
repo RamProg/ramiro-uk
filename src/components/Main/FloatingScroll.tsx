@@ -7,11 +7,14 @@ type FloatingScrollProps = {
 };
 
 const FloatingScroll = ({ direction }: FloatingScrollProps) => {
+  const isDirectionUp = direction === 'up';
   return (
-    <Link href='#nav' className='absolute bottom-5 right-5 animate-bounce'>
+    <Link
+      href={isDirectionUp ? '' : '#nav'}
+      className='fixed bottom-5 right-5 animate-bounce'>
       <FontAwesomeIcon
         icon={faPlaneUp}
-        rotation={direction === 'down' ? 180 : undefined}
+        rotation={isDirectionUp ? undefined : 180}
         size='2x'
         color='white'
       />

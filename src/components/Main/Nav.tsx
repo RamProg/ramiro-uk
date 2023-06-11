@@ -37,14 +37,14 @@ const Nav = () => {
               <li
                 className='flex justify-center items-center border-2 p-2 rounded-md w-48 h-14'
                 key={link.text}>
-                <Link target='_blank' href={link.url}>
+                <Link target='_blank' href={link.url} className="text-white">
                   {link.text.toUpperCase()}
                 </Link>
               </li>
             );
           })}
         </ul>
-        <FloatingScroll direction='up' />
+        {/* <FloatingScroll direction='up' /> */}
       </nav>
     </>
   );
