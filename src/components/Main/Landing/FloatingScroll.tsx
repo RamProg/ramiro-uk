@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { faPlaneUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -10,9 +9,13 @@ const FloatingScroll = ({ direction }: FloatingScrollProps) => {
   const isDirectionUp = direction === 'up';
 
   const handlePress = () => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     window.scrollTo({
       behavior: 'smooth',
-      top: isDirectionUp ? 0 : Number.MAX_VALUE,
+      top: isDirectionUp ? 0 : window.innerHeight,
     });
   };
 
