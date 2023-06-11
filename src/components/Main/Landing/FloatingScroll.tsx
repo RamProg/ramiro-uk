@@ -1,11 +1,16 @@
 import { faPlaneUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Dispatch, SetStateAction } from 'react';
 
 type FloatingScrollProps = {
   direction: 'up' | 'down';
+  handleFloatPress: Dispatch<SetStateAction<boolean>>;
 };
 
-const FloatingScroll = ({ direction }: FloatingScrollProps) => {
+const FloatingScroll = ({
+  direction,
+  handleFloatPress,
+}: FloatingScrollProps) => {
   const isDirectionUp = direction === 'up';
 
   const handlePress = () => {
@@ -17,6 +22,8 @@ const FloatingScroll = ({ direction }: FloatingScrollProps) => {
       behavior: 'smooth',
       top: isDirectionUp ? 0 : window.innerHeight,
     });
+
+    handleFloatPress(prev => !prev);
   };
 
   return (
