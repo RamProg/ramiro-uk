@@ -32,12 +32,13 @@ const Nav = () => {
     <>
       <nav id='nav' className='flex h-screen justify-center p-10 bg-orange-700'>
         <ul className='flex flex-col items-center justify-evenly'>
-          {links.map(link => {
+          {links.map((link, i) => {
             return (
               <li
+                id={'link' + i}
                 className='flex justify-center items-center border-2 p-2 rounded-md w-48 h-14'
                 key={link.text}>
-                <Link target='_blank' href={link.url} className="text-white">
+                <Link target='_blank' href={link.url} className='text-white'>
                   {link.text.toUpperCase()}
                 </Link>
               </li>

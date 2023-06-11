@@ -7,7 +7,8 @@ import { useEffect, useState } from 'react';
 
 export default function Main() {
   const [scrollY, setScrollY] = useState(0);
-  const windowHeight = window.innerHeight;
+  const isBrowser = () => typeof window !== "undefined"
+  const windowHeight = isBrowser() ? window.innerHeight : 0;
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
