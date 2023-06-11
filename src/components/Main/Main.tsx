@@ -1,3 +1,5 @@
+'use client'
+
 import FloatingScroll from '@/components/Main/FloatingScroll';
 import Landing from '@/components/Main/Landing/Landing';
 import Nav from '@/components/Main/Nav';
