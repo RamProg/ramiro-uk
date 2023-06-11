@@ -30,7 +30,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav id='nav' className='flex h-screen justify-center p-10 bg-orange-700'>
+      <nav id='nav' className='flex h-minimalScreen justify-center p-10 bg-orange-700'>
         <ul className='flex flex-col items-center justify-evenly'>
           {links.map((link, i) => {
             return (

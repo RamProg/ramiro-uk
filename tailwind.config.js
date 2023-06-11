@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-roboto)', ...defaultTheme.fontFamily.sans]
       },
+      spacing: {
+        'minimalScreen': '100svh',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
