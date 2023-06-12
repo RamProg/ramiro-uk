@@ -2,7 +2,7 @@
 
 import FloatingScroll from '@/components/Main/Landing/FloatingScroll';
 import Landing from '@/components/Main/Landing/Landing';
-import Nav from '@/components/Main/Landing/Nav/Nav';
+import Nav from '@/components/Main/Landing/Nav';
 import useScroll from '@/hooks/useScroll';
 import { useEffect, useState } from 'react';
 

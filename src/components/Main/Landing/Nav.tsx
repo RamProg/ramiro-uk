@@ -30,17 +30,21 @@ const Nav = () => {
   return (
     <nav
       id='nav'
-      className='flex justify-center p-10 bg-orange-700 h-dynamicScreen sm:absolute sm:bottom-0 sm:left-0 sm:h-12 sm:w-screen sm:bg-orange-400'>
-      <ul className='flex flex-col items-center justify-evenly sm:flex-row'>
+      className='flex justify-center p-10 bg-orange-700 h-dynamicScreen sm:absolute sm:bottom-0 sm:left-0 sm:h-12 sm:p-0 sm:w-screen sm:bg-orange-400 sm:items-center'>
+      <ul className='flex flex-col items-center justify-evenly sm:flex-row sm:justify-between'>
         {links.map((link, i) => {
           return (
-            <li
-              className='flex items-center justify-center w-48 p-2 border-2 rounded-md h-14 sm:h-10 sm:w-44 sm:border-slate-900 sm:border-2 sm:text-white'
+            <Link
+              target='_blank'
+              href={link.url}
+              className='text-white'
               key={link.text}>
-              <Link target='_blank' href={link.url} className='text-white'>
+              <li
+                className=
+                  'flex items-center justify-center w-48 p-2 border-2 rounded-md h-14 sm:h-8 sm:w-44 sm:border-slate-900 sm:border-2 sm:text-slate-900 sm:ml-2 sm:mr-2 sm:hover:bg-yellow-500' >
                 {link.text}
-              </Link>
-            </li>
+              </li>
+            </Link>
           );
         })}
       </ul>
