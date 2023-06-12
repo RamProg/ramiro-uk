@@ -9,19 +9,19 @@ type LinksType = LinkType[];
 
 const links: LinksType = [
   {
-    url: 'https://drive.google.com/file/d/1huO-gbsx88v5zIhoA1DmPvQ5OOiAPTUl/view?usp=sharing',
+    url: '/cv',
     text: 'Download my CV',
   },
   {
-    url: 'https://calendly.com/ramirodlp/15min',
+    url: '/meet',
     text: 'Book a Meeting',
   },
   {
-    url: 'https://forms.gle/MwpUZgpCzjuMxAGo6',
+    url: '/message',
     text: 'Drop me a Message',
   },
   {
-    url: 'https://www.linkedin.com/in/ramirodlp/details/projects/',
+    url: '/projects',
     text: 'Check my Projects',
   },
 ];
