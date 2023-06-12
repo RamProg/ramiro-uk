@@ -12,6 +12,9 @@ export default function Main() {
   useEffect(() => {
     const handleTouchMove = (event: Event) => {
       console.log('handleTouchMove');
+      if (window.scrollY < 0) {
+        return;
+      } 
       event.stopPropagation();
       event.preventDefault();
       if (isMoving) {
@@ -20,7 +23,7 @@ export default function Main() {
       setIsMoving(true);
       setTimeout(() => {
         setIsMoving(false);
-      }, 1000);
+      }, 750);
       console.log('movimiento siendo procesado');
 
       window.scroll({
