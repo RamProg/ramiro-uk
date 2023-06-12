@@ -32,8 +32,9 @@ const FloatingScroll = () => {
   }, []);
 
   return (
-    <div
-      onClick={enabled ? () => handlePress() : () => {}}
+    <button
+      onClick={handlePress}
+      disabled={!enabled}
       className='fixed bottom-5 right-5 animate-bounce p-2 bg-transparent'>
       <FontAwesomeIcon
         icon={faPlaneUp}
@@ -41,7 +42,7 @@ const FloatingScroll = () => {
         size='2x'
         color='white'
       />
-    </div>
+    </button>
   );
 };
 
