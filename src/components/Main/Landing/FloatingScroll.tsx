@@ -1,24 +1,24 @@
 'use client';
 
+import useScroll from '@/hooks/useScroll';
 import { faPlaneUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { isDesktop } from 'react-device-detect';
 
 const FloatingScroll = () => {
   const [isDirectionUp, setIsDirectionUp] = useState(false);
   const [enabled, setEnabled] = useState(true);
+  const [hidden, setHidden] = useState(true);
+  const { scrollToNext } = useScroll();
 
-  const handlePress = () => {
+  const handlePress = useCallback(() => {
     setEnabled(false);
     setTimeout(() => {
       setEnabled(true);
     }, 750);
-
-    window.scrollTo({
-      behavior: 'smooth',
-      top: isDirectionUp ? 0 : window.innerHeight,
-    });
-  };
+    scrollToNext();
+  }, [scrollToNext]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,11 +31,16 @@ const FloatingScroll = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setHidden(isDesktop);
+  }, []);
+
   return (
     <button
       onClick={handlePress}
       disabled={!enabled}
-      className='fixed bottom-5 right-5 animate-bounce p-2 bg-transparent'>
+      hidden={hidden}
+      className='fixed p-2 bg-transparent bottom-5 right-5 animate-bounce'>
       <FontAwesomeIcon
         icon={faPlaneUp}
         rotation={isDirectionUp ? undefined : 180}

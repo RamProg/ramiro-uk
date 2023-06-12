@@ -2,11 +2,13 @@
 
 import FloatingScroll from '@/components/Main/Landing/FloatingScroll';
 import Landing from '@/components/Main/Landing/Landing';
-import Nav from '@/components/Main/Landing/Nav';
+import Nav from '@/components/Main/Landing/Nav/Nav';
+import useScroll from '@/hooks/useScroll';
 import { useEffect, useState } from 'react';
 
 export default function Main() {
   const [isMoving, setIsMoving] = useState(false);
+  const { scrollToNext } = useScroll();
 
   useEffect(() => {
     const handleTouchMove = (event: Event) => {
@@ -20,10 +22,7 @@ export default function Main() {
         setIsMoving(false);
       }, 750);
 
-      window.scroll({
-        top: window.scrollY > 50 ? 0 : window.innerHeight,
-        behavior: 'smooth',
-      });
+      scrollToNext();
     };
 
     window.addEventListener('touchmove', handleTouchMove, { passive: false });
@@ -31,7 +30,7 @@ export default function Main() {
     return () => {
       window.removeEventListener('touchmove', handleTouchMove);
     };
-  }, [isMoving]);
+  }, [isMoving, scrollToNext]);
 
   return (
     <div>
