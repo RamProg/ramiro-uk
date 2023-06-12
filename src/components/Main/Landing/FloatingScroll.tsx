@@ -1,15 +1,10 @@
-'use client'
+'use client';
 
 import { faPlaneUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-type FloatingScrollProps = {
-  direction: 'up' | 'down';
-  handleFloatPress: Dispatch<SetStateAction<boolean>>;
-};
-
-const FloatingScroll = ({ handleFloatPress }: FloatingScrollProps) => {
+const FloatingScroll = () => {
   const [isDirectionUp, setIsDirectionUp] = useState(false);
   const [enabled, setEnabled] = useState(true);
 
@@ -23,13 +18,11 @@ const FloatingScroll = ({ handleFloatPress }: FloatingScrollProps) => {
       behavior: 'smooth',
       top: isDirectionUp ? 0 : window.innerHeight,
     });
-
-    handleFloatPress(prev => !prev);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsDirectionUp(window.scrollY !== 0);
+      setIsDirectionUp(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);

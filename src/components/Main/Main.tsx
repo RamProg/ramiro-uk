@@ -7,30 +7,23 @@ import { useEffect, useState } from 'react';
 
 export default function Main() {
   const [isMoving, setIsMoving] = useState(false);
-  const [floatDown, setFloatDown] = useState(true);
 
   useEffect(() => {
     const handleTouchMove = (event: Event) => {
-      console.log('handleTouchMove');
-      if (window.scrollY < 0) {
-        return;
-      } 
       event.stopPropagation();
       event.preventDefault();
-      if (isMoving) {
-        return;
-      }
+
+      if (isMoving) return;
+
       setIsMoving(true);
       setTimeout(() => {
         setIsMoving(false);
       }, 750);
-      console.log('movimiento siendo procesado');
 
       window.scroll({
-        top: window.scrollY > 10 ? 0 : window.innerHeight,
+        top: window.scrollY > 50 ? 0 : window.innerHeight,
         behavior: 'smooth',
       });
-      setFloatDown(prev => !prev);
     };
 
     window.addEventListener('touchmove', handleTouchMove, { passive: false });
@@ -44,10 +37,7 @@ export default function Main() {
     <div>
       <Landing />
       <Nav />
-      <FloatingScroll
-        direction={floatDown ? 'down' : 'up'}
-        handleFloatPress={setFloatDown}
-      />
+      <FloatingScroll />
     </div>
   );
 }

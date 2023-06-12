@@ -15,6 +15,7 @@ module.exports = {
       },
       spacing: {
         'minimalScreen': '100svh',
+        'dynamicScreen': '100dvh',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
