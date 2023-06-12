@@ -23,6 +23,26 @@ const nextConfig = {
         destination: 'https://www.linkedin.com/in/ramirodlp/details/projects/',
         permanent: true,
       },
+      {
+        source: '/linkedin',
+        destination: 'https://www.linkedin.com/in/ramirodlp/',
+        permanent: true,
+      },
+      {
+        source: '/github',
+        destination: 'https://github.com/RamProg',
+        permanent: true,
+      },
+      {
+        source: '/stackoverflow',
+        destination: 'https://stackoverflow.com/users/13844309/ramaprog',
+        permanent: true,
+      },
+      {
+        source: '/medium',
+        destination: 'https://medium.com/@ramirodlp',
+        permanent: true,
+      },
     ];
   },
 };

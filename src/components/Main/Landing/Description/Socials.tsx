@@ -22,22 +22,22 @@ const icons: IconsType[] = [
   {
     fontAwesomeIcon: faLinkedin,
     text: 'linkedin',
-    url: 'https://www.linkedin.com/in/ramirodlp/',
+    url: '/linkedin',
   },
   {
     fontAwesomeIcon: faGithub,
     text: 'github',
-    url: 'https://github.com/RamProg',
+    url: '/github',
   },
   {
     fontAwesomeIcon: faStackOverflow,
     text: 'stackoverflow',
-    url: 'https://stackoverflow.com/users/13844309/ramaprog',
+    url: '/stackoverflow',
   },
   {
     fontAwesomeIcon: faMedium,
     text: 'medium',
-    url: 'https://medium.com/@ramirodlp',
+    url: '/medium',
   },
 ];
 
