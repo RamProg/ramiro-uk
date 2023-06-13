@@ -6,7 +6,6 @@ import {
   faMobileScreenButton,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import useGradient from '@/hooks/useGradient';
 
 type LinesType = {
   fontAwesomeIcon: IconDefinition;
@@ -30,7 +29,7 @@ const lines: LinesType[] = [
 
 const Description = () => {
   return (
-    <div className='flex flex-col items-center sm:w-1/2 sm:items-start'>
+    <div className='flex flex-col items-center sm:w-full sm:items-start'>
       <div className='mt-5 text-3xl sm:text-5xl sm:font-bold text-ramiro-font'>
         Hi, I&apos;m{' '}
         <span className='text-transparent bg-clip-text bg-gradient-to-br from-pink-500 from-1% via-orange-400 via-40% to-yellow-300 to-90%'>

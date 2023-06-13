@@ -45,7 +45,7 @@ const FloatingScroll = () => {
         icon={faPlaneUp}
         rotation={isDirectionUp ? undefined : 180}
         size='2x'
-        color='white'
+        color={isDirectionUp ? '#292929' : '#D8D8D8'}
       />
     </button>
   );

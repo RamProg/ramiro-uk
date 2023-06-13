@@ -4,14 +4,12 @@ import Image from 'next/image';
 import Description from './Description/Description';
 import { isMobile } from 'react-device-detect';
 import { useEffect, useState } from 'react';
-import useGradient from '@/hooks/useGradient';
 
 const env = process.env.NODE_ENV;
 const __DEV__ = env === 'development';
 
 const Landing = () => {
   const [imageSize, setImageSize] = useState<256 | 384>(256);
-  const { pinkToYellow } = useGradient();
 
   useEffect(() => {
     const IS_DEV_ON_PHONE = __DEV__ && window.innerWidth < 768;

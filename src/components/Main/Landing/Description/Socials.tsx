@@ -8,8 +8,8 @@ import {
   faMedium,
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
-import { useState } from 'react';
-import { isMobile } from 'react-device-detect';
+import { useEffect, useState } from 'react';
+import { isDesktop } from 'react-device-detect';
 
 type IconText = 'linkedin' | 'github' | 'stackoverflow' | 'medium';
 
@@ -51,6 +51,7 @@ const allOff = {
 
 const Socials = () => {
   const [hoverIcons, setHoverIcons] = useState(allOff);
+  const [iconsSize, setIconsSize] = useState<'2x' | '3x'>('3x');
   const handleIconClick = (url: string) => {
     window.open(url, '_blank', 'noreferrer');
   };
@@ -63,6 +64,10 @@ const Socials = () => {
 
   const isHovered = (text: IconText) => hoverIcons[text];
 
+  useEffect(() => {
+    setIconsSize(isDesktop ? '3x' : '2x');
+  }, []);
+
   return (
     <div className='flex flex-row justify-start mt-10'>
       {icons.map(icon => (
@@ -72,7 +77,7 @@ const Socials = () => {
           onMouseEnter={() => handleMouseEnter(icon.text)}
           onMouseLeave={handleMouseLeave}
           icon={icon.fontAwesomeIcon}
-          size={isMobile ? '2x' : '3x'}
+          size={iconsSize}
           color={isHovered(icon.text) ? '#fed7aa' : '#D8D8D8'}
           className='w-6 p-1 mr-4 sm:mr-7 sm:w-9 hover:cursor-pointer'
         />
