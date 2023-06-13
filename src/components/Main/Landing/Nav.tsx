@@ -19,7 +19,7 @@ const links: LinksType = [
   },
   {
     url: '/meet',
-    text: 'meet me',
+    text: 'book a call',
   },
   {
     url: '/projects',
@@ -41,7 +41,7 @@ const Nav = () => {
               className='text-white'
               key={link.text}>
               <li
-                className={`flex items-center justify-center w-48 p-2 border-2 rounded-md h-14 sm:h-8 sm:w-auto sm:border-0 sm:text-yellow-300 sm:ml-5 sm:mr-5 sm:mt-8 sm:hover:text-yellow-100 ${cedarville.variable} sm:font-serif sm:text-2xl`}>
+                className={`flex items-center justify-center w-48 p-2 border-2 rounded-md h-14 sm:h-8 sm:w-auto sm:border-0 sm:text-yellow-300 sm:ml-8 sm:mr-8 sm:mt-8 sm:hover:text-yellow-100 ${cedarville.variable} sm:font-serif sm:text-2xl`}>
                 {link.text.toLocaleLowerCase()}
               </li>
             </Link>
