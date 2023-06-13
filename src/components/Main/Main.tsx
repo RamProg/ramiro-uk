@@ -25,10 +25,17 @@ export default function Main() {
       scrollToNext();
     };
 
+    const handleTouchStart = (event: Event) => {
+      event.preventDefault();
+      event.stopPropagation();      
+    };
+
     window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    window.addEventListener('touchstart', handleTouchStart, { passive: false });
 
     return () => {
       window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchstart', handleTouchStart);
     };
   }, [isMoving, scrollToNext]);
 
