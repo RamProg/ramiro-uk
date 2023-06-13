@@ -1,5 +1,10 @@
 import Socials from './Socials';
-import { faCode, faEarthEurope, IconDefinition, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCode,
+  faEarthEurope,
+  IconDefinition,
+  faMobileScreenButton,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type LinesType = {
@@ -24,22 +29,17 @@ const lines: LinesType[] = [
 
 const Description = () => {
   return (
-    <div className="flex flex-col items-center sm:w-1/2 sm:items-start">
-      <p className="mt-5 text-3xl text-slate-200">
-        Hi! I&apos;m Ramiro
+    <div className='flex flex-col items-center sm:w-1/2 sm:items-start'>
+      <p className='mt-5 text-3xl sm:text-5xl sm:font-bold text-slate-200'>
+        Hi, I&apos;m Ramiro
       </p>
-      <p className="flex text-lg text-slate-200">
+      <p className='flex mt-1 text-lg font-bold sm:text-3xl text-slate-200'>
         I lead Engineering Teams
       </p>
-      <ul className="flex flex-col justify-between flex-grow mt-10">
+      <ul className='flex flex-col justify-between flex-grow mt-10'>
         {lines.map(line => (
-          <li
-            key={line.text}
-            className="ml-2 text-sm text-slate-200">
-            <FontAwesomeIcon
-              icon={line.fontAwesomeIcon}
-              className="w-4 mr-2"
-            />
+          <li key={line.text} className='ml-2 text-sm sm:text-lg sm:ml-4 text-slate-200'>
+            <FontAwesomeIcon icon={line.fontAwesomeIcon} className='w-4 mr-2' />
             {line.text}
           </li>
         ))}

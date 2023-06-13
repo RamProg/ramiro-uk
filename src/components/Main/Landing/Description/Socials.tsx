@@ -9,6 +9,7 @@ import {
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
+import { isMobile } from 'react-device-detect';
 
 type IconText = 'linkedin' | 'github' | 'stackoverflow' | 'medium';
 
@@ -63,19 +64,19 @@ const Socials = () => {
   const isHovered = (text: IconText) => hoverIcons[text];
 
   return (
-    <div className="flex flex-row justify-start mt-10">
+    <div className='flex flex-row justify-start mt-10'>
       {icons.map(icon => (
         <div
           key={icon.text}
           onClick={() => handleIconClick(icon.url)}
           onMouseEnter={() => handleMouseEnter(icon.text)}
           onMouseLeave={handleMouseLeave}
-          className="p-1 hover:cursor-pointer">
+          className='p-1 hover:cursor-pointer'>
           <FontAwesomeIcon
             icon={icon.fontAwesomeIcon}
-            size="2x"
+            size={isMobile ? '2x' : '3x'}
             color={isHovered(icon.text) ? 'grey' : 'white'}
-            className="w-6 mr-4"
+            className='w-6 mr-4 sm:mr-7 sm:w-9'
           />
         </div>
       ))}
