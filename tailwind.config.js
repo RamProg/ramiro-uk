@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-roboto)', ...defaultTheme.fontFamily.sans]
+        sans: ['var(--font-roboto)', ...defaultTheme.fontFamily.sans],
+        serif: ['var(--font-cedarville)', ...defaultTheme.fontFamily.serif]
       },
       spacing: {
         'minimalScreen': '100svh',

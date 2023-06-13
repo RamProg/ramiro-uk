@@ -7,7 +7,7 @@ config.autoAddCss = false;
 
 export const metadata = {
   title: 'Ramiro',
-  description: 'Software Engineer',
+  description: 'Leading Engineering Teams',
   themeColor: '#ff5733',
 };
 

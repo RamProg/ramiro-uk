@@ -13,3 +13,13 @@ export const roboto = localFont({
   ],
   variable: '--font-roboto',
 });
+
+export const cedarville = localFont({
+  src: [
+    {
+      path: '../../../public/fonts/CedarvilleCursive-Regular.ttf',
+      weight: '400',
+    },
+  ],
+  variable: '--font-cedarville',
+});
