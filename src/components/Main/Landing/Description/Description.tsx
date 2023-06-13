@@ -6,6 +6,7 @@ import {
   faMobileScreenButton,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useGradient from '@/hooks/useGradient';
 
 type LinesType = {
   fontAwesomeIcon: IconDefinition;
@@ -30,15 +31,21 @@ const lines: LinesType[] = [
 const Description = () => {
   return (
     <div className='flex flex-col items-center sm:w-1/2 sm:items-start'>
-      <p className='mt-5 text-3xl sm:text-5xl sm:font-bold text-slate-200'>
-        Hi, I&apos;m Ramiro
-      </p>
-      <p className='flex mt-1 text-lg font-bold sm:text-3xl text-slate-200'>
+      <div className='mt-5 text-3xl sm:text-5xl sm:font-bold text-ramiro-font'>
+        Hi, I&apos;m{' '}
+        <span className='text-transparent bg-clip-text bg-gradient-to-br from-pink-500 from-1% via-orange-400 via-40% to-yellow-300 to-90%'>
+          Ramiro{' '}
+        </span>
+        <span className='inline-block animate-waving-hand'>👋🏻</span>
+      </div>
+      <p className='flex mt-1 text-lg font-bold sm:text-3xl text-ramiro-font'>
         I lead Engineering Teams
       </p>
       <ul className='flex flex-col justify-between flex-grow mt-10'>
         {lines.map(line => (
-          <li key={line.text} className='ml-2 text-sm sm:text-lg sm:ml-4 text-slate-200'>
+          <li
+            key={line.text}
+            className='ml-2 text-sm sm:text-lg sm:ml-4 text-ramiro-font'>
             <FontAwesomeIcon icon={line.fontAwesomeIcon} className='w-4 mr-2' />
             {line.text}
           </li>
