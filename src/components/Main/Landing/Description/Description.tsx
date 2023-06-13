@@ -24,14 +24,14 @@ const lines: LinesType[] = [
 
 const Description = () => {
   return (
-    <div className="flex flex-col sm:w-1/2 items-center sm:items-start">
-      <p className="text-3xl mt-5 text-slate-200">
+    <div className="flex flex-col items-center sm:w-1/2 sm:items-start">
+      <p className="mt-5 text-3xl text-slate-200">
         Hi! I&apos;m Ramiro
       </p>
       <p className="flex text-lg text-slate-200">
-        I lead Engineering Teams to success
+        I lead Engineering Teams
       </p>
-      <ul className="flex flex-col flex-grow justify-between mt-10">
+      <ul className="flex flex-col justify-between flex-grow mt-10">
         {lines.map(line => (
           <li
             key={line.text}
