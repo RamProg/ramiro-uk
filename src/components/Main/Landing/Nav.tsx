@@ -36,6 +36,7 @@ const Nav = () => {
         {links.map((link, i) => {
           return (
             <Link
+              prefetch={false}
               target='_blank'
               href={link.url}
               className='text-white'
