@@ -21,9 +21,9 @@ const Landing = () => {
       className={
         'flex justify-center sm:items-center h-minimalScreen sm:h-screen bg-ramiro-background'
       }>
-      <div className='flex flex-col sm:flex-row items-center sm:items-stretch mt-10 sm:mt-0 h-64 sm:h-96 sm:w-[48rem]'>
+      <div className='flex flex-col sm:flex-row items-center sm:items-stretch mt-10 sm:mt-0 h-64 sm:h-96 sm:w-[796px]'>
         <Image
-          className='rounded-full shadow-[15px_15px_60px_-15px_rgba(255,87,51,0.5)] bg-gradient-to-br from-pink-500 from-1% via-orange-400 via-40% to-yellow-300 to-90% sm:w-1/2 border-transparent p-3'
+          className='rounded-full shadow-[15px_15px_60px_-15px_rgba(255,87,51,0.5)] bg-gradient-to-br from-pink-500 from-1% via-orange-400 via-40% to-yellow-300 to-90% sm:w-[24rem] border-transparent p-3'
           src='/images/me-nobg.png'
           width={imageSize}
           height={imageSize}
@@ -31,7 +31,6 @@ const Landing = () => {
           placeholder='empty'
           priority={true}
         />
-        <div className='w-8 h-5' />
         <Description />
       </div>
     </main>
