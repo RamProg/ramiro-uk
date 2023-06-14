@@ -25,23 +25,10 @@ export default function Main() {
       scrollToNext();
     };
 
-    const handlePrevent = (event: Event) => {
-      event.preventDefault();
-      event.stopPropagation();      
-    };
-
     window.addEventListener('touchmove', handleTouchMove, { passive: false });
-    window.addEventListener('touchstart', handlePrevent, { passive: false });
-    window.addEventListener('touchend', handlePrevent, { passive: false });
-    window.addEventListener('touchcancel', handlePrevent, { passive: false });
-
 
     return () => {
       window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchstart', handlePrevent);
-      window.removeEventListener('touchend', handlePrevent);
-      window.removeEventListener('touchcancel', handlePrevent);
-
     };
   }, [isMoving, scrollToNext]);
 
