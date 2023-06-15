@@ -11,20 +11,14 @@ export const metadata = {
   themeColor: '#ff5733',
   openGraph: {
     title: 'Ramiro',
-    description: 'This is a testing for open graph',
-    url: 'https://ramiro.uk',
+    description: 'Leading Engineering Teams',
+    url: 'https://www.ramiro.uk',
     siteName: 'Ramiro',
     images: [
       {
-        url: 'https://ramiro.uk/_next/image?url=%2Fimages%2Fme-nobg.png&w=384&q=75',
-        width: 800,
-        height: 600,
-      },
-      {
-        url: 'https://ramiro.uk/_next/image?url=%2Fimages%2Fme-nobg.png&w=384&q=75',
-        width: 1800,
-        height: 1600,
-        alt: 'My custom alt',
+        url: '/images/opengraph.png',
+        width: 854,
+        height: 425,
       },
     ],
     locale: 'en_US',
