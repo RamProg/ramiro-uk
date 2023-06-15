@@ -36,19 +36,17 @@ const FloatingScroll = () => {
   }, []);
 
   return (
-    <button
-      onClick={handlePress}
-      disabled={!enabled}
+    <span
+      onClick={enabled ? handlePress : () => {}}
       hidden={hidden}
-      className='fixed p-2 bg-transparent bottom-5 right-5 animate-bounce'
-      unselectable='on'>
+      className='fixed p-2 bg-transparent bottom-5 right-5 animate-bounce'>
       <FontAwesomeIcon
         icon={faPlaneUp}
         rotation={isDirectionUp ? undefined : 180}
         size='2x'
         color={isDirectionUp ? '#292929' : '#D8D8D8'}
       />
-    </button>
+    </span>
   );
 };
 
