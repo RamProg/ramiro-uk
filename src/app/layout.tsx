@@ -9,7 +9,9 @@ export const metadata = {
   title: 'Ramiro',
   description: 'Leading Engineering Teams',
   themeColor: '#ff5733',
-};
+  openGraph: {
+    images: ['/apple-touch-icon.png'],
+  },};
 
 export default function RootLayout({
   children,
