@@ -20,7 +20,7 @@ export const metadata = {
   icons: [
     {
       rel: 'icon',
-      type: 'image/png',
+      type: '/images/favicon/png',
       sizes: '32x32',
       url: '/images/favicon-32x32.png',
     },
@@ -28,28 +28,28 @@ export const metadata = {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      url: '/images/favicon-16x16.png',
+      url: '/images/favicon/favicon-16x16.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: 'any',
-      url: '/images/favicon.ico',
+      url: '/images/favicon/favicon.ico',
     },
     {
       rel: 'apple-touch-icon',
       sizes: '180x180',
-      url: '/images/apple-touch-icon.png',
+      url: '/images/favicon/apple-touch-icon.png',
     },
     {
       rel: 'shortcut icon',
       sizes: '192x192',
-      url: '/images/android-chrome-192x192.png',
+      url: '/images/favicon/android-chrome-192x192.png',
     },
     {
       rel: 'shortcut icon',
       sizes: '512x512',
-      url: '/images/android-chrome-512x512.png',
+      url: '/images/favicon/android-chrome-512x512.png',
     },
   ],
 };
