@@ -10,7 +10,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
       keyframes: {
         wave: {
           '0%': { transform: 'rotate(0.0deg)' },
@@ -22,9 +21,20 @@ module.exports = {
           '60%': { transform: 'rotate(0.0deg)' },
           '100%': { transform: 'rotate(0.0deg)' },
         },
+        x: {
+          '0%': {
+            transform: 'translateX(0)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateX(-25%)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+        },
       },
       animation: {
         'waving-hand': 'wave 2s linear infinite',
+        'bounce-x': 'x 1s infinite',
       },
       fontFamily: {
         sans: ['var(--font-roboto)', ...defaultTheme.fontFamily.sans],
@@ -45,6 +55,9 @@ module.exports = {
       colors: {
         'ramiro-background': '#292929',
         'ramiro-font': '#D8D8D8',
+        'ramiro-light-orange': '#fed7aa',
+        'ramiro-light-grey': '#D8D8D8',
+        'ramiro-coral': '#ec8a5f',
       },
     },
   },

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Description from './Description/Description';
 import { isMobile } from 'react-device-detect';
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 const env = process.env.NODE_ENV;
 const __DEV__ = env === 'development';
@@ -11,7 +11,7 @@ const __DEV__ = env === 'development';
 const Landing = () => {
   const [imageSize, setImageSize] = useState<256 | 384>(256);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const IS_DEV_ON_PHONE = __DEV__ && window.innerWidth < 768;
     setImageSize(isMobile || IS_DEV_ON_PHONE ? 256 : 384);
   }, []);
@@ -19,7 +19,7 @@ const Landing = () => {
   return (
     <main
       className={
-        'flex justify-center sm:items-center h-minimalScreen sm:h-screen bg-ramiro-background'
+        'flex justify-center sm:items-center h-minimalScreen sm:h-screen'
       }>
       <div className='flex flex-col sm:flex-row items-center sm:items-stretch mt-10 sm:mt-0 h-64 sm:h-96 sm:w-[796px]'>
         <Image

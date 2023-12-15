@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { useEffect, useState } from 'react';
 import { isDesktop } from 'react-device-detect';
+import { colors } from '@/constants/colors';
 
 type IconText = 'linkedin' | 'github' | 'stackoverflow' | 'medium';
 
@@ -78,7 +79,7 @@ const Socials = () => {
           onMouseLeave={handleMouseLeave}
           icon={icon.fontAwesomeIcon}
           size={iconsSize}
-          color={isHovered(icon.text) ? '#fed7aa' : '#D8D8D8'}
+          color={isHovered(icon.text) ? colors.lightOrange : colors.lightGrey}
           className='w-6 p-1 ml-2 mr-2 sm:ml-0 sm:mr-7 sm:w-9 hover:cursor-pointer'
         />
       ))}
