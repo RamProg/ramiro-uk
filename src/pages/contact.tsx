@@ -22,13 +22,13 @@ const Contact = () => {
           </div>
           <p className='mt-6 mb-4'>Schedule a meeting</p>
         </Link>
-        <p className='w-48 p-2 text-xs text-justify rounded bg-ramiro-light-orange text-ramiro-background'>
+        <p className='p-2 text-sm text-justify rounded w-52 sm:w-48 sm:text-xs bg-ramiro-light-orange text-ramiro-background'>
           Here you can book a short meeting with me, feel free to do it if you
           have something you wish to discuss. Please, share relevant information
           in advance.
         </p>
       </div>
-      <div className='self-center my-12 sm:my-0 sm:mx-20'>
+      <div className='self-center my-10 sm:my-0 sm:mx-20'>
         <div className='w-80 h-[1px] sm:w-[1px] sm:h-64 bg-ramiro-light-orange'></div>
       </div>
       <div className='flex flex-col items-center'>
@@ -46,7 +46,7 @@ const Contact = () => {
           </div>
           <p className='mt-6 mb-4'>Send me a message</p>
         </Link>
-        <p className='w-48 p-2 text-xs text-justify rounded bg-ramiro-light-orange text-ramiro-background'>
+        <p className='p-2 text-sm text-justify rounded w-52 sm:w-48 sm:text-xs bg-ramiro-light-orange text-ramiro-background'>
           Here you can drop me a message, don&apos;t worry I&apos;ll receive it
           and read it as it goes straight to my mailbox. Please leave your
           contact information.

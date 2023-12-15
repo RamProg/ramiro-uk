@@ -9,7 +9,7 @@ type ReviewProps = {
 
 const Review = ({ review }: ReviewProps) => {
   return (
-    <div className='flex flex-col max-w-sm p-4 rounded-lg bg-ramiro-light-orange text-ramiro-background'>
+    <div className='flex flex-col max-w-sm p-5 rounded-lg sm:p-4 bg-ramiro-light-orange text-ramiro-background'>
       <div className='flex'>
         <Link
           target={'_blank'}

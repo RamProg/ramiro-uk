@@ -102,7 +102,7 @@ const NavHomeLink = () => {
 const NavLink = ({ isTarget, text }: { isTarget: boolean; text: string }) => {
   return (
     <li
-      className={`flex items-center justify-center w-48 p-2 border-2 border-ramiro-background bg-orange-200 sm:bg-transparent rounded-md h-14 sm:h-8 sm:border-0 text-ramiro-background sm:text-ramiro-font text-2xl sm:mt-8 sm:hover:text-orange-200 sm:hover:shadow-orange-200 ${cedarville.variable} font-cedarville sm:w-[80px]`}>
+      className={`flex items-center justify-center w-48 p-2 border-2 border-ramiro-background bg-orange-200 sm:bg-transparent rounded-md h-14 sm:h-8 sm:border-0 text-ramiro-background sm:text-ramiro-font text-3xl sm:text-2xl sm:mt-8 sm:hover:text-orange-200 sm:hover:shadow-orange-200 ${cedarville.variable} font-cedarville sm:w-[80px]`}>
       <span className={`${isTarget && 'sm:text-ramiro-light-orange'}`}>
         {text.toLocaleLowerCase()}
       </span>
