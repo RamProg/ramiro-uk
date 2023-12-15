@@ -36,6 +36,7 @@ export default function Main() {
     <div>
       <Landing />
       <FloatingScroll />
+      <Nav />
     </div>
   );
 }

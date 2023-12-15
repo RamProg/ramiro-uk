@@ -50,6 +50,10 @@ const Nav = () => {
     setIsMobile(isMobileDetect);
   }, []);
 
+  if (isMobile && pathname !== '/') {
+    return null;
+  }
+
   return (
     <nav
       id='nav'
