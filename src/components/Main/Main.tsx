@@ -11,8 +11,8 @@ import { isMobile } from 'react-device-detect';
 export default function Main() {
   const [isMoving, setIsMoving] = useState(false);
   const searchParams = useSearchParams();
-  const menu = searchParams?.get('menu');
-  const [showOnlyMenu, setShowOnlyMenu] = useState(!!menu);
+  const showMenuParam = searchParams?.get('menu') === 'true';
+  const [showOnlyMenu, setShowOnlyMenu] = useState(showMenuParam);
   const { scrollToNext } = useScroll();
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function Main() {
   }, []);
 
   useEffect(() => {
-    if (isMobile && !showOnlyMenu) {
+    if (isMobile && showMenuParam && !showOnlyMenu) {
       scrollTo(0, document.documentElement.scrollHeight);
     }
   }, [showOnlyMenu]);
