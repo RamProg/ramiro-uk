@@ -5,7 +5,7 @@ import Nav from '@/components/Main/Landing/Nav';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${roboto.variable} font-sans`}>
+    <main className={`${roboto.variable} font-sans bg-ramiro-background`}>
       <Component {...pageProps} />
       <Nav />
     </main>

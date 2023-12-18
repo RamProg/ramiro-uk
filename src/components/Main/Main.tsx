@@ -6,6 +6,7 @@ import Nav from '@/components/Main/Landing/Nav';
 import useScroll from '@/hooks/useScroll';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { isMobile } from 'react-device-detect';
 
 export default function Main() {
   const [isMoving, setIsMoving] = useState(false);
@@ -15,11 +16,11 @@ export default function Main() {
   const { scrollToNext } = useScroll();
 
   useEffect(() => {
-    setShowOnlyMenu(false);
+    if (isMobile) setShowOnlyMenu(false);
   }, []);
 
   useEffect(() => {
-    if (!showOnlyMenu) {
+    if (isMobile && !showOnlyMenu) {
       scrollTo(0, document.documentElement.scrollHeight);
     }
   }, [showOnlyMenu]);
