@@ -49,8 +49,8 @@ export default function Main() {
 
   return (
     <div>
-      {!showOnlyMenu && <Landing />}
       <FloatingScroll />
+      {!showOnlyMenu && <Landing />}
       <Nav />
     </div>
   );
