@@ -4,12 +4,21 @@ import Image from 'next/image';
 import Description from './Description/Description';
 import { isMobile } from 'react-device-detect';
 import { useLayoutEffect, useState } from 'react';
+import useScroll from '@/hooks/useScroll';
+import { useSearchParams } from 'next/navigation';
 
 const env = process.env.NODE_ENV;
 const __DEV__ = env === 'development';
 
 const Landing = () => {
   const [imageSize, setImageSize] = useState<256 | 384>(256);
+  const searchParams = useSearchParams();
+  const menu = searchParams?.get('menu');
+  const { scrollToNext } = useScroll();
+
+  useLayoutEffect(() => {
+    if (menu) scrollToNext();
+  }, [menu]);
 
   useLayoutEffect(() => {
     const IS_DEV_ON_PHONE = __DEV__ && window.innerWidth < 768;
