@@ -3,6 +3,8 @@
 import useScroll from '@/hooks/useScroll';
 import { faPlaneUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRouter } from 'next/router';
+import { useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 import { isDesktop } from 'react-device-detect';
 
@@ -11,14 +13,20 @@ const FloatingScroll = () => {
   const [enabled, setEnabled] = useState(true);
   const [hidden, setHidden] = useState(true);
   const { scrollToNext } = useScroll();
+  const searchParams = useSearchParams();
+  const menu = searchParams?.get('menu');
+  const router = useRouter();
 
   const handlePress = useCallback(() => {
     setEnabled(false);
+    if (menu) {
+      router.replace('/', undefined, { shallow: true });
+    }
     setTimeout(() => {
       setEnabled(true);
     }, 750);
     scrollToNext();
-  }, [scrollToNext]);
+  }, [scrollToNext, router, menu]);
 
   useEffect(() => {
     const handleScroll = () => {
