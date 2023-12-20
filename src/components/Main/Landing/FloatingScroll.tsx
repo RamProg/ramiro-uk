@@ -29,11 +29,13 @@ const FloatingScroll = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsDirectionUp(window.scrollY > 50);
-    };
 
+  const handleScroll = () => {
+    setIsDirectionUp(window.scrollY > 50);
+  };
+
+  useEffect(() => {
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
