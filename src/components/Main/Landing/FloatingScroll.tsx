@@ -19,7 +19,7 @@ const FloatingScroll = () => {
     setTimeout(() => {
       setEnabled(true);
     }, 750);
-    scrollToNext();
+    scrollToNext(isDirectionUp);
   };
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 const useScroll = () => {
-  const scrollToNext = () => {
-    const isAtBottom = window.scrollY > 50;
+  const scrollToNext = (isAtBottomParam?: boolean) => {
+    const isAtBottom = isAtBottomParam ?? window.scrollY > 50;
     const top = isAtBottom ? 0 : document.documentElement.scrollHeight;
 
     scrollTo({ top, behavior: 'smooth' });
