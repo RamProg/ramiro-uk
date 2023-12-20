@@ -13,19 +13,22 @@ const FloatingScroll = () => {
   const [hidden, setHidden] = useState(true);
   const { scrollToNext } = useScroll();
 
-  const {replace, asPath} = useRouter();
+  const { replace, asPath } = useRouter();
 
   const handlePress = useCallback(() => {
     setEnabled(false);
 
     setTimeout(() => {
-      if (asPath === '/#nav') {
-        replace('/', undefined, { shallow: true });
-      }
       setEnabled(true);
     }, 750);
     scrollToNext();
-  }, [asPath, replace, scrollToNext]);
+  }, [scrollToNext]);
+
+  useEffect(() => {
+    if (asPath === '/#nav') {
+      replace('/', undefined, { shallow: true, scroll: false });
+    }
+  }, [asPath, replace, isDirectionUp]);
 
   useEffect(() => {
     const handleScroll = () => {
