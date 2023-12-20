@@ -24,18 +24,19 @@ const FloatingScroll = () => {
 
   useEffect(() => {
     if (asPath === '/#nav') {
+      setIsDirectionUp(true);
       replace('/', undefined, { shallow: true, scroll: false });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 
-  const handleScroll = () => {
-    setIsDirectionUp(window.scrollY > 50);
-  };
-
+  
   useEffect(() => {
-    handleScroll();
+    const handleScroll = () => {
+      setIsDirectionUp(window.scrollY > 50);
+    };
+    
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
