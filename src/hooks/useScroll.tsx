@@ -1,11 +1,9 @@
 const useScroll = () => {
   const scrollToNext = () => {
-    const isAtBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight;
-    const top = isAtBottom ? 0 : document.documentElement.scrollHeight - window.innerHeight;
+    const isAtBottom = window.scrollY > 50;
+    const top = isAtBottom ? 0 : document.documentElement.scrollHeight;
 
-    setTimeout(function () {
-      window.scrollTo({ top, behavior: 'smooth' });
-    }, 0);
+    window.scrollTo({ top, behavior: 'smooth' });
   };
 
   return { scrollToNext };
