@@ -19,10 +19,11 @@ const FloatingScroll = () => {
 
   const handlePress = useCallback(() => {
     setEnabled(false);
-    if (menu) {
-      router.replace('/', undefined, { shallow: true });
-    }
+
     setTimeout(() => {
+      if (menu) {
+        router.replace('/', undefined, { shallow: true });
+      }
       setEnabled(true);
     }, 750);
     scrollToNext();
