@@ -66,7 +66,7 @@ const Nav = () => {
           return (
             <Link
               prefetch={false}
-              target={link.internal ? '_parent' : '_blank'}
+              target={link.internal ? undefined : '_blank'}
               href={isTarget ? '' : link.url}
               aria-disabled={isTarget}
               className={`text-white ${

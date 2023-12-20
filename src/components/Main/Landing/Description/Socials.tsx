@@ -80,7 +80,7 @@ const Socials = () => {
           icon={icon.fontAwesomeIcon}
           size={iconsSize}
           color={isHovered(icon.text) ? colors.lightOrange : colors.lightGrey}
-          className='w-6 p-1 ml-2 mr-2 sm:ml-0 sm:mr-7 sm:w-9 hover:cursor-pointer'
+          className='w-8 p-1 ml-2 mr-2 sm:ml-0 sm:mr-7 sm:w-11 hover:cursor-pointer'
         />
       ))}
     </div>

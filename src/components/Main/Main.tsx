@@ -23,7 +23,7 @@ export default function Main() {
     if (isMobile && showMenuParam && !showOnlyMenu) {
       scrollTo(0, document.documentElement.scrollHeight);
     }
-  }, [showOnlyMenu]);
+  }, [showMenuParam, showOnlyMenu]);
 
   useEffect(() => {
     const handleTouchMove = (event: Event) => {
@@ -51,7 +51,6 @@ export default function Main() {
     <div>
       <FloatingScroll />
       {!showOnlyMenu && <Landing />}
-      <Nav />
     </div>
   );
 }

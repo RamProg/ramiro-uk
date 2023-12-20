@@ -44,8 +44,8 @@ const Description = () => {
         {lines.map(line => (
           <li
             key={line.text}
-            className='ml-2 text-sm sm:text-lg sm:ml-4'>
-            <FontAwesomeIcon icon={line.fontAwesomeIcon} className='w-4 mr-2' />
+            className='flex items-center mt-1 ml-2 text-sm sm:mt-0 sm:text-lg sm:ml-4'>
+            <FontAwesomeIcon icon={line.fontAwesomeIcon} className='w-4 mr-2 max-h-4' />
             {line.text}
           </li>
         ))}

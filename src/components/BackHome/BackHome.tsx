@@ -19,11 +19,10 @@ const BackHome = () => {
     <Link
       href={{ pathname: '/', query: { menu: true } }}
       scroll={false}
-      className='fixed p-2 bottom-5 left-5 animate-bounce-x '>
+      className='fixed p-2 bottom-5 left-5 animate-bounce-x'>
       <FontAwesomeIcon
         icon={faBackward}
-        size='2x'
-        className='text-ramiro-light-grey icon-border'
+        className='w-8 h-8 text-ramiro-light-grey icon-border'
       />
     </Link>
   );
