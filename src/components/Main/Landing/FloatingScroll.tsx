@@ -4,7 +4,7 @@ import useScroll from '@/hooks/useScroll';
 import { faPlaneUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRouter } from 'next/router';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const FloatingScroll = () => {
   const [isDirectionUp, setIsDirectionUp] = useState(false);
