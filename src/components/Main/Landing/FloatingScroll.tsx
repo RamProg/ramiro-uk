@@ -51,7 +51,7 @@ const FloatingScroll = () => {
       className='fixed w-12 h-12 p-2 bg-transparent bottom-5 right-5 animate-bounce'>
       <FontAwesomeIcon
         icon={faPlaneUp}
-        size='10x'
+        size='2x'
         color={isDirectionUp ? '#292929' : '#D8D8D8'}
         className={`${!isDirectionUp && 'transform rotate-180'}`}
       />
