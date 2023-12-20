@@ -17,7 +17,7 @@ const BackHome = () => {
 
   return (
     <Link
-      href={{ pathname: '/', query: { menu: true } }}
+      href='/#nav'
       shallow={true}
       scroll={false}
       className='fixed p-2 bottom-5 left-5 animate-bounce-x'>

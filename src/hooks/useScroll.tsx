@@ -3,7 +3,7 @@ const useScroll = () => {
     const isAtBottom = window.scrollY > 50;
     const top = isAtBottom ? 0 : document.documentElement.scrollHeight;
 
-    window.scrollTo({ top, behavior: 'smooth' });
+    scrollTo({ top, behavior: 'smooth' });
   };
 
   return { scrollToNext };
