@@ -5,12 +5,10 @@ import { faPlaneUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useState } from 'react';
-import { isDesktop } from 'react-device-detect';
 
 const FloatingScroll = () => {
   const [isDirectionUp, setIsDirectionUp] = useState(false);
   const [enabled, setEnabled] = useState(true);
-  const [hidden, setHidden] = useState(true);
   const { scrollToNext } = useScroll();
 
   const { replace, asPath } = useRouter();
@@ -28,7 +26,8 @@ const FloatingScroll = () => {
     if (asPath === '/#nav') {
       replace('/', undefined, { shallow: true, scroll: false });
     }
-  }, [asPath, replace, isDirectionUp]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,14 +40,9 @@ const FloatingScroll = () => {
     };
   }, []);
 
-  useEffect(() => {
-    setHidden(isDesktop);
-  }, []);
-
   return (
     <i
       onClick={enabled ? handlePress : () => {}}
-      hidden={hidden}
       className='fixed w-12 h-12 p-2 bg-transparent bottom-5 right-5 animate-bounce'>
       <FontAwesomeIcon
         icon={faPlaneUp}
