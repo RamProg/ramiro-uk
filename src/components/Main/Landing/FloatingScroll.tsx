@@ -13,30 +13,28 @@ const FloatingScroll = () => {
 
   const { replace, asPath } = useRouter();
 
-  const handlePress = useCallback(() => {
+  const handlePress = () => {
     setEnabled(false);
 
     setTimeout(() => {
       setEnabled(true);
     }, 750);
     scrollToNext();
-  }, [scrollToNext]);
+  };
 
   useEffect(() => {
     if (asPath === '/#nav') {
       setIsDirectionUp(true);
       replace('/', undefined, { shallow: true, scroll: false });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-
-  
   useEffect(() => {
     const handleScroll = () => {
       setIsDirectionUp(window.scrollY > 50);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
