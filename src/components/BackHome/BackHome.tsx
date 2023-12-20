@@ -1,13 +1,13 @@
 import { faBackward } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { isMobile as isMobileDetect } from 'react-device-detect';
 
 const BackHome = () => {
   const [isMobile, setIsMobile] = useState<boolean>();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setIsMobile(isMobileDetect);
   }, []);
 

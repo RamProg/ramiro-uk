@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Description from './Description/Description';
 import { isMobile } from 'react-device-detect';
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const env = process.env.NODE_ENV;
 const __DEV__ = env === 'development';
@@ -11,7 +11,7 @@ const __DEV__ = env === 'development';
 const Landing = () => {
   const [imageSize, setImageSize] = useState<256 | 384>(256);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const IS_DEV_ON_PHONE = __DEV__ && window.innerWidth < 768;
     setImageSize(isMobile || IS_DEV_ON_PHONE ? 256 : 384);
   }, []);

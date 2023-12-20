@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { cedarville } from '@/assets/fonts';
 import { usePathname } from 'next/navigation';
 import { isMobile as isMobileDetect } from 'react-device-detect';
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type LinkType = {
   url: string;
@@ -46,7 +46,7 @@ const Nav = () => {
   const [isMobile, setIsMobile] = useState<boolean>();
   const pathname = usePathname();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setIsMobile(isMobileDetect);
   }, []);
 

@@ -5,7 +5,7 @@ import BackHome from '@/components/BackHome/BackHome';
 
 const Contact = () => {
   return (
-    <div className='flex flex-col items-center justify-start py-10 text-xl sm:py-0 sm:justify-center sm:flex-row text-ramiro-light-orange h-dynamicScreen'>
+    <div className='flex flex-col items-center justify-start py-5 text-xl sm:py-5 sm:justify-center sm:flex-row text-ramiro-light-orange h-dynamicScreen'>
       <BackHome />
       <div className='flex flex-col items-center'>
         <Link
