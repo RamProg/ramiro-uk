@@ -4,6 +4,17 @@ import { BASE_REVIEWERS_IMAGE_PATH } from '@/constants';
 const reviews: Review[] = [
   {
     author: {
+      name: 'Matias Heber',
+      role: 'Managed by me at Launch Consulting (former TAG Latam)',
+      picture: BASE_REVIEWERS_IMAGE_PATH + 'matias.jpg',
+      linkedin: 'https://www.linkedin.com/in/mati-heber/',
+      email: '',
+    },
+    review:
+      'I had the opportunity to work alongside Ramiro and he consistently demonstrated great willingness, technical knowledge, and leadership skills. He prioritized good work, clear objectives, and provided assistance in both development and management aspects to advance the project in the best way possible. It has been a pleasure to work with him, and I hope that our paths cross again in the future.',
+  },
+  {
+    author: {
       name: 'Francisco J. Escobar',
       role: 'Managed by me at Launch Consulting (former TAG Latam)',
       picture: BASE_REVIEWERS_IMAGE_PATH + 'fran.jpg',
