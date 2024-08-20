@@ -11,7 +11,7 @@ const nextConfig = {
       },
       {
         source: '/meet',
-        destination: 'https://calendly.com/ramirodlp/15min',
+        destination: 'https://calendar.app.google/JysCUGiEXqZrEGeH7',
         permanent: false,
         basePath: false,
       },
