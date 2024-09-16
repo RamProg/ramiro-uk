@@ -4,14 +4,13 @@ const nextConfig = {
     return [
       {
         source: '/cv',
-        destination:
-          'https://drive.google.com/file/d/1WjtYzzvYgkpONwzbBAgAp4JSjoQUM6HO/view',
+        destination: 'https://bit.ly/cv-ramiro',
         permanent: false,
         basePath: false,
       },
       {
         source: '/meet',
-        destination: 'https://calendar.app.google/JysCUGiEXqZrEGeH7',
+        destination: 'https://bit.ly/quick-sync-ramiro',
         permanent: false,
         basePath: false,
       },
