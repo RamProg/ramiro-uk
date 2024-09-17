@@ -10,7 +10,7 @@ const nextConfig = {
       },
       {
         source: '/meet',
-        destination: 'https://ramiro.uk',
+        destination: '',
         permanent: false,
         basePath: false,
       },
