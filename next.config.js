@@ -9,8 +9,8 @@ const nextConfig = {
         basePath: false,
       },
       {
-        source: '/meet',
-        destination: '',
+        source: '/call',
+        destination: 'https://calendar.app.google/goMJBGQoPiH1jY5V9',
         permanent: false,
         basePath: false,
       },
