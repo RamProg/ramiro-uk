@@ -9,7 +9,7 @@ const Contact = () => {
       <BackHome />
       <div className='flex flex-col items-center'>
         <Link
-          href={'/meet'}
+          href={'/call'}
           target='_blank'
           className='underline hover:text-ramiro-coral'>
           <div className='flex justify-center'>
