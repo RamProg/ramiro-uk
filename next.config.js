@@ -4,7 +4,13 @@ const nextConfig = {
     return [
       {
         source: '/cv',
-        destination: 'https://bit.ly/cv-ramiro',
+        destination: 'https://drive.google.com/file/d/1McR_39pYOTGulNyPurmNGKxBVZrl-BNa/view?usp=sharing',
+        permanent: false,
+        basePath: false,
+      },
+      {
+        source: '/cv-ats',
+        destination: 'https://docs.google.com/document/d/1RuTf_ePkQRqBfHIypedJ61H3eA6SDSzxz3z0K_YJgkY/edit?usp=sharing',
         permanent: false,
         basePath: false,
       },
