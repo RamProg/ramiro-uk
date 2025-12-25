@@ -8,7 +8,7 @@ const Bebe = () => {
       <div className='max-w-4xl text-center'>
         <h1 className='text-4xl sm:text-6xl font-bold mb-6'>You Won!</h1>
         <p className='text-lg sm:text-xl mb-4'>
-          You won a giftcard of 100 euros to use in one of the following stores:
+          You won a gift card of 100 euros to use in one of the following stores:
         </p>
         <ol className='text-left text-sm sm:text-base space-y-3 list-decimal list-inside'>
           <li>
@@ -18,7 +18,7 @@ const Bebe = () => {
             buena atención personalizada y ambiente familiar.
           </li>
           <li>
-            <strong>LIFE Premamá &amp; Women</strong>
+            <strong>LIFE Premamá & Women</strong>
             <br />
             Ofrece prendas tanto para embarazadas como opciones que funcionan
             después del parto.
