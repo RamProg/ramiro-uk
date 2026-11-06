@@ -19,7 +19,7 @@ const lines: LinesType[] = [
   },
   {
     fontAwesomeIcon: faEarthEurope,
-    text: 'UK Based',
+    text: 'Spain Based',
   },
   {
     fontAwesomeIcon: faMobileScreenButton,
